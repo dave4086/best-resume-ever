@@ -35,6 +35,6 @@ jobs:
 
       - name: Deploy
         run: |-
-          gsutil cp resume/data.yml gs://$GCS_BUCKET
+          gsutil cp resume/data.yml gs://$GCS_BUCKET/resume/data.yml
         env:
           GCS_BUCKET: ${{ secrets.GCS_BUCKET }}   
