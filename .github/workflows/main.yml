@@ -28,7 +28,7 @@ jobs:
       - name: Setup - gcloud / gsutil
         uses: google-github-actions/setup-gcloud@master
         with:
-          service_account_key: ${{ secrets.GCS_SA_KEY }}
+          credentials_json: ${{ secrets.GCS_SA_KEY }}
           export_default_credentials: true     
         env:
           GCS_BUCKET: ${{ secrets.GCS_BUCKET }}  
