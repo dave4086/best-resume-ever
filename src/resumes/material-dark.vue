@@ -119,6 +119,14 @@
           <div class="subheadline">{{experience.timeperiod}}</div>
           <p class="info">
             {{experience.description}}
+            <ul v-if="experience.list" >
+             <li v-for="(item, index) in experience.list" :key="index">
+              <span class="list-item-black">
+               {{item}}
+              </span>
+            </li>
+           </ul>
+
           </p>  
       </a>
     </div>
